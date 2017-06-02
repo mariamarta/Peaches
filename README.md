@@ -26,7 +26,7 @@ Have Bundler installed locally -- run `gem install bundler`<br>
 Have Heroku Command Line Interface (CLI) aka Heroku Toolbelt installed on your laptop<br>
 Once installed, log in to your Heroku account from your terminal by typing `heroku login`<br>
 <br>
-Prepare the application by cloning the Peaches repository
+Clone Peaches repository and `cd` into directory
 ```bash
 $ git clone https://github.com/mariamarta/Peaches.git
 $ cd Peaches
