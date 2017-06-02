@@ -18,26 +18,26 @@ Run Rails server
 $ rails s
 ```
 
-Open your browser and open Peaches by entering localhost:3000
+Open your browser and open Peaches by entering localhost:3000<br>
 
 ## Steps to Deploying on Heroku
-Have a Heroku account
-Have Bundler installed locally -- run `gem install bundler`
-Have Heroku Command Line Interface (CLI) aka Heroku Toolbelt installed on your laptop
-Once installed, log in to your Heroku account from your terminal by typing `heroku login`
-
+Have a Heroku account <br>
+Have Bundler installed locally -- run `gem install bundler`<br>
+Have Heroku Command Line Interface (CLI) aka Heroku Toolbelt installed on your laptop<br>
+Once installed, log in to your Heroku account from your terminal by typing `heroku login`<br>
+<br>
 Prepare the application by cloning the Peaches repository
 ```bash
 $ git clone https://github.com/mariamarta/Peaches.git
 $ cd Peaches
 ```
 
-Create an app on Heroku
+Create an app on Heroku<br>
 Make sure you're in the directory that contains the Peaches Rails app then run the following the code
 ```bash
 $ heroku create
 ```
-With this command, Heroku generates a random name for the app. You can change this name later.
+With this command, Heroku generates a random name for the app. You can change this name later<br>
 
 Always verify that the remote has been added to your project by running
 ```bash
@@ -51,5 +51,5 @@ Deploy the code
 $ git push heroku master
 ```
 
-When the application has been deployed, visit the app using the URL generated from `heroku create`
+When the application has been deployed, visit the app using the URL generated from `heroku create`<br>
 or open from the terminal with command: `heroku open`
