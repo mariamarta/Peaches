@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1><%= @course.name %></h1>
+   <center> <%= @course.professor %> </center>
+ </p>
+
+  <div class="col-md-6 col-md-offset-8">
+<h4>Total Grade: </h4>
+<% x=0 %>
+<% y=0 %>
+<%weight = 0%>
+<% @course.grades.each do |p| %>
+	<%x = x + p.score/p.total*p.weight%>
+	<%y = y + p.weight%>
+	<% end %>
+	<% if y== 0 %>
+		<div class = 'one'> N/A </div>
+		<% else %>
+		<div class = 'two'>
+	<% c= (x/y*100) %> </h4>
+	<%='%.2f' % c%> 
+
+	</div>
+	<% end %>
+</p>
+</div>
+
+  <div class="col-md-6 col-md-offset-3">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Assignment</th>
+              <th>Score</th>
+              <th>Total</th>
+              <th>Weight</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @course.grades.each do |grade| %>
+              <tr>
+                <td><%= grade.name %></td>
+                <td><%= grade.score %></td>
+                <td><%= grade.total %></td>
+                <td><%= grade.weight %></td>
+                <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
+                <td><%= link_to 'Remove', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+
+
+  <div class="col-md-6 col-md-offset-3">
+  <h4>Enter New Assignment</h4>
+<%= form_for [@course, @course.grades.build] do |f| %>
+	
+	<div class='field'>
+		<%= f.label :Name %><br>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div class='field'>
+		<%= f.label :Score %> <br>
+		<%= f.number_field :score %>
+	</div>
+	<div class='field'>
+		<%= f.label :total %> <br>
+		<%= f.number_field :total %>
+	</div>
+	<div class='field'>
+		<%= f.label :Weight %> <br>
+		<%= f.number_field :weight %>
+	</div>
+	<div class='actions'>
+		<%=f.submit %>
+	</div>
+<% end %>
+
+<ul class="pager">
+<%= link_to 'Edit Course Info', edit_course_path(@course) %> |
+<%= link_to 'View All Courses', courses_path %>
+</ul>
+  </div>
+</div>
