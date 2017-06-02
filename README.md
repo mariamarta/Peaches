@@ -1,6 +1,6 @@
 # Peaches 
 
-<img src="https://i.imgsafe.org/5f18132866.png" align="left" width="120px" hspace="10" vspace="6"/> Peaches is a web application designed for students with the intention of being used as a tool to monitor their academic performance throughout the semester. Peaches can calculate a student’s current grade for their courses through inputted assignments, midterms and quizzes. <br><br><br>
+<img src="https://i.imgsafe.org/5f18132866.png" align="left" width="120px" hspace="10" vspace="6"/> Peaches is a web application designed for students with the intention of being used as a tool to monitor their academic performance throughout the semester. Peaches can calculate a student’s current grade for their courses through inputted assignments, midterms and quizzes. Visit the website here at https://peachesgradetracker.herokuapp.com <br><br><br>
 
 
 ## Running Peaches on localhost
